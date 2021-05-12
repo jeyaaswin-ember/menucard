@@ -226,7 +226,141 @@ header .navigation li a:hover{
     opacity: .4;
     font-weight: 200;
 }
+//////////////////////////////////////////////////////////////////////////////////////// 
+@media screen and (max-width: 934px){
+
+.btn{
+    width: 14%;
+    padding: 6px;
+    margin-top: 40px;
+    left: 42%;
+    position: absolute;
+    font-family: 'KoHo', sans-serif;
+    font-size: 22px;
+    background: #f2ae30;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 0 white;
+    transition: ease-out 0.5s;
+    outline: none;
+}
+.btn:hover{
+    box-shadow: inset 300px 0 0 0 white;
+
+}
+.cards-sec{
+    margin-top: 80px;
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card {
+    margin: 30px auto;
+    width: 250px;
+    height: 350px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.151), -5px -5px 30px 7px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition: 0.4s;
+  }
   
+  .card .card_image {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background-color: rgba(243, 221, 20, 0.534);
+  }
+  
+  .card .card_image img {
+    width: 100%;
+    height: 85%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    object-fit: cover;
+  }
+  
+  .card .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: 'KoHo', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: -50px;
+    height: 40px;
+  }
+  
+  .card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+  
+  .title-white {
+    color: black;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////// 
+@media screen and (max-width: 600px){
+
+header .navigation{
+    display: none;
+}
+.logo{
+    width: 65px;
+    height: 35px;
+}
+.content{
+    padding-bottom: 150px;
+}
+.content h1{
+    font-size: 35px;
+}
+.content p{
+    font-size: 16px;
+}
+.btn{
+    width: 30%;
+    padding: 6px;
+    margin-top: 30px;
+    left: 35%;
+    position: absolute;
+    font-family: 'KoHo', sans-serif;
+    font-size: 20px;
+    background: #f2ae30;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 0 white;
+    transition: ease-out 0.5s;
+    outline: none;
+}
+.btn:hover{
+    box-shadow: inset 300px 0 0 0 white;
+
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(20, 22, 5, 0.329),rgba(39, 46, 9, 0.247)),url(../../assets/images/back1.jpg);
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+}
   
 
   
