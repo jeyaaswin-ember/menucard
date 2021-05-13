@@ -3,17 +3,77 @@
     margin: 0px;
     padding: 0px;
 }
+.wrapper{
+  background-image: linear-gradient(rgba(20, 22, 5, 0.493),rgba(39, 46, 9, 0.288)), url(../../assets/images/back1.jpg);
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .logo{
-    width: 120px;
-    height: 60px;
-    padding-top: 10px;
-    padding-left: 5px;
+  width: 120px;
+  height: 60px;
+  padding-top: 10px;
+  padding-left: 5px;
 }
-.banner .content{
+.list{
+  display: none;
+  width: 25px;
+  height: 25px;
+}
+.exit{
+  display: none;
+}
+nav{
+  display: flex;
+  padding: 2px 6px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.315) ;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 25px;
+  position: relative;
+
+}
+.nav-links ul li a{
+  text-decoration: none;
+  color:#f2ae30;
+  font-size: 20px;
+  font-family: 'KoHo', sans-serif;
+}
+.nav-links ul li a:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f2ae30;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.5s;
+
+}
+.nav-links ul li a:after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: orange;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.5s;
+
+}
+.nav-links ul li a:hover:before, .nav-links ul li a:hover:after{
+  transform: scaleX(1);
+}.content{
+    padding-top: 100px;
     text-align: center;
-}
-.content{
-    padding-bottom: 100px;
 }
 .content h1{
     font-family: 'KoHo', sans-serif;
@@ -25,16 +85,7 @@
      color: white;
      font-size: 30px;
 }
-.banner{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(rgba(20, 22, 5, 0.329),rgba(39, 46, 9, 0.247)),url(../../assets/images/back1.jpg);
-    background-size: cover;
-}
+
 .btn{
     width: 12%;
     padding: 6px;
@@ -54,35 +105,6 @@
 .btn:hover{
     box-shadow: inset 300px 0 0 0 white;
 
-}
-header{
-    position: fixed;
-    background: rgba(0, 0, 0, 0.541);
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header .navigation{
-    padding-right: 30px;
-    position: relative;
-    display: flex;
-}
-header .navigation li{
-    list-style: none;
-    margin-left: 45px;
-}
-header .navigation li a{
-    text-decoration: none;
-    color:#f2ae30;
-    font-size: 19px;
-    font-family: 'Poppins', sans-serif;
-}
-header .navigation li a:hover{
-    color: white;
 }
 .menucont span{
     color: #f2ae30;
@@ -305,14 +327,81 @@ header .navigation li a:hover{
 
 ////////////////////////////////////////////////////////////////////////////////////////// 
 @media screen and (max-width: 600px){
+  .nav-links ul{
+    padding: 20px 20px;
+  }
+  .nav-links ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'KoHo', sans-serif;
+  }
+  .nav-links ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s;
+  
+  }
+  .nav-links ul li a:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.5s;
+  }
+  .nav-links ul li a:hover:before, .nav-links ul li a:hover:after{
+    transform: scaleX(1);
+  }.content{
+      padding-top: 100px;
+      text-align: center;
+  }
+  .list{
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding-right: 15px;
+  }
+  .exit{
+    display: block;
+    width: 23px;
+    height: 23px;
+    padding: 10px 8px;
+  }
+  .logo{
+    width: 80px;
+    height: 40px;
+}
+nav{
+    background: rgba(0, 0, 0, 0.384);
 
-header .navigation{
-    display: none;
 }
-.logo{
-    width: 65px;
-    height: 35px;
+.nav-links ul li{
+    display: block;
 }
+.nav-links{
+    position: absolute;
+    background: white;
+    height: 90vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1.2s;
+}
+
 .content{
     padding-bottom: 150px;
 }
